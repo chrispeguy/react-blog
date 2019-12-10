@@ -1,8 +1,10 @@
 import React from "react";
+import {BrowserRouter as Router, Link} from "react-router-dom";
 //imput {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
 
 const nav = () => {
     return(
+      <Router>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div className="container">
           <a className="navbar-brand" href="index.html">Start Bootstrap</a>
@@ -14,23 +16,24 @@ const nav = () => {
             <i className="fas fa-bars"/>
           </button>
           <div className="collapse navbar-collapse" id="navbarResponsive">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="index.html">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="about.html">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="post.html">Sample Post</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">Home</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/about">About</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/posts">Sample Post</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/contact">Contact</Link>
+                </li>
+              </ul> 
           </div>
         </div>
       </nav>
+      </Router>
     )
 };
 

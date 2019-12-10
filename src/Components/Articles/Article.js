@@ -1,5 +1,5 @@
 import React from "react";
-import PostImage from "../../img/post-sample-image.jpg";
+import PostImage from "../../assets/img/post-sample-image.jpg";
 
 const article = ()=> {
     return(
