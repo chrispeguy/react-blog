@@ -13,7 +13,7 @@ const post = (props)=> {
             </h3>
           </a>
           <p class="post-meta">Posted by
-            <a href="#"> Peguy </a>
+            <a href="#"> {props.author} </a>
             on December 11, 2019</p>
         </div>
         <hr/>

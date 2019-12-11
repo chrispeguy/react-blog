@@ -10,7 +10,7 @@ import Footer from "../src/Components/Footer/Footer";
 import Home from "../src/Pages/Home/Home";
 import About from "../src/Pages/About/About";
 import Contact from "../src/Pages/Contacts/Contacts";
-import Posts from "../src/Pages/Posts/SamplePost";
+import SamplePosts from "./Pages/SamplePost/SamplePost";
 
 class App extends Component{
   render(){
@@ -35,7 +35,7 @@ class App extends Component{
                   <Link className="nav-link" to="/about">About</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/posts">Sample Post</Link>
+                  <Link className="nav-link" to="/sampleposts">Sample Post</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/contact">Contact</Link>
@@ -52,7 +52,7 @@ class App extends Component{
                   <Route exact path="/"> <Home/> </Route>
                   <Route path="/about">  <About/> </Route>
                   <Route path="/contact"><Contact/> </Route>
-                  <Route path="/posts"><Posts/></Route>
+                  <Route path="/sampleposts"><SamplePosts/></Route>
                 </Switch>
               </div>
             </div>

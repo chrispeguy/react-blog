@@ -3,7 +3,7 @@ import Article from "../../Components/Articles/Article";
 
 const samplePost = (props) =>{
     return(
-      <Article id={selectedPostId} />
+      <Article />
     )
 };
 export default samplePost;

@@ -14,9 +14,17 @@ class Home extends Component{
   }
 
   componentDidMount(){
-    axios.get("https://jsonplaceholder.typicode.com/posts").then(response =>{
+    axios.get("https://jsonplaceholder.typicode.com/posts")
+    .then(response =>{
+      const posts = response.data.slice(0, 4);
+      const updatedPosts = posts.map(post =>{
+        return {
+          ...post,
+          author: "Peguy"
+        }
+      })
       this.setState({
-        posts:response.data
+        posts:updatedPosts
       })
     })
   }
@@ -33,7 +41,11 @@ class Home extends Component{
         {
         this.state.posts.map(post => {
           return (
-            <Post key={post.id} title={post.title} body={post.body} clicked={() => this.postSelectedHandler(post.id) } />
+            <Post key={post.id} 
+              title={post.title} 
+              body={post.body}
+              author={post.author} 
+              clicked={() => this.postSelectedHandler(post.id) } />
           )
         })
         }
