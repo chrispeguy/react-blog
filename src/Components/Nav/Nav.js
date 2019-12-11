@@ -1,10 +1,10 @@
 import React from "react";
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import { Link} from "react-router-dom";
 //imput {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
 
 const nav = () => {
     return(
-      <Router>
+      
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div className="container">
           <a className="navbar-brand" href="index.html">Start Bootstrap</a>
@@ -33,7 +33,6 @@ const nav = () => {
           </div>
         </div>
       </nav>
-      </Router>
     )
 };
 
