@@ -13,6 +13,9 @@ import Contact from "../src/Pages/Contacts/Contacts";
 import SamplePosts from "./Pages/SamplePost/SamplePost";
 
 class App extends Component{
+  // state = {
+  //   selectedPostId: null
+  // }
   render(){
     return (
        <Router>
@@ -35,16 +38,13 @@ class App extends Component{
                   <Link className="nav-link" to="/about">About</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/sampleposts">Sample Post</Link>
-                </li>
-                <li className="nav-item">
                   <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
               </ul> 
           </div>
         </div>
       </nav>
-          <Header/>
+          <Header  />
           <div className="container">
             <div className="row">
               <div className="col-lg-8 col-md-10 mx-auto">
@@ -52,7 +52,7 @@ class App extends Component{
                   <Route exact path="/"> <Home/> </Route>
                   <Route path="/about">  <About/> </Route>
                   <Route path="/contact"><Contact/> </Route>
-                  <Route path="/sampleposts"><SamplePosts/></Route>
+                  <Route path="/post/:id" component={SamplePosts}/> insertion des parametres dans les routes
                 </Switch>
               </div>
             </div>

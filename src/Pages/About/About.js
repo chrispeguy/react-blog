@@ -1,9 +1,9 @@
 import React from "react";
-import Post from "../../Components/Post/Post";
+import About from "../../Components/About/About";
 
 const about = ()=> {
     return(
-        <Post/>
+        <About/>
     )
 };
 export default about;
